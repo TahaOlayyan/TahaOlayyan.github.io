@@ -94,6 +94,19 @@ body {
     margin-bottom: 25px;
     font-size: 0.95rem;
 }
+/* --- Contact Links Hover Effect --- */
+.contact-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.contact-link:hover {
+    color: #22d3ee; /* لون النيون السماوي عشان يلبق مع الثيم */
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
 
 .status-badge {
     display: inline-block;
@@ -257,4 +270,5 @@ footer {
     from { opacity: 0.2; transform: scale(0.98); }
     to { opacity: 1; transform: scale(1); }
 }
+
 
