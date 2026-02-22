@@ -205,3 +205,15 @@ footer {
     .contact-bar { flex-direction: column; gap: 10px; }
     .btn { display: block; width: 90%; margin: 10px auto; }
 }
+/* --- JS Scroll Reveal Classes --- */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
