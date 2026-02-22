@@ -1,11 +1,11 @@
-/* --- New Emerald Tech Theme --- */
+/* --- Minimalist Mono Theme (Senior Backend Vibe) --- */
 :root {
-    --bg-color: #111827;       /* Dark Slate/Charcoal */
-    --card-bg: #1f2937;        /* Lighter Slate for cards */
-    --text-main: #f9fafb;      /* Crisp White */
-    --text-muted: #9ca3af;     /* Soft Gray */
-    --accent: #10b981;         /* Emerald Green */
-    --accent-glow: rgba(16, 185, 129, 0.3);
+    --bg-color: #0a0a0a;       /* Deepest Black */
+    --card-bg: #171717;        /* Very Dark Gray for cards */
+    --text-main: #ffffff;      /* Pure White for headings */
+    --text-muted: #a3a3a3;     /* Professional Gray for paragraphs */
+    --accent: #e5e5e5;         /* Light Silver for highlights */
+    --accent-glow: rgba(255, 255, 255, 0.1); /* Subtle white glow */
     --font-main: 'Inter', sans-serif;
 }
 
@@ -19,9 +19,9 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Hero Layout (Full Width) --- */
+/* --- Hero Layout --- */
 .hero {
-    background: linear-gradient(180deg, #0f172a 0%, var(--bg-color) 100%);
+    background: linear-gradient(180deg, #121212 0%, var(--bg-color) 100%);
     text-align: center;
     padding: 60px 20px 40px;
     border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -32,25 +32,31 @@ body {
     height: 170px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--accent);
+    border: 3px solid var(--card-bg); /* subtle border */
     box-shadow: 0 0 30px var(--accent-glow);
     margin-bottom: 25px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    filter: grayscale(20%); /* يخفف ألوان الصورة شوي لتناسب الثيم */
 }
 
-.profile-img:hover { transform: scale(1.05); }
+.profile-img:hover { 
+    transform: scale(1.05); 
+    filter: grayscale(0%);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+}
 
 .name {
     font-size: 3.5rem;
     font-weight: 700;
     color: var(--text-main);
+    letter-spacing: -1px;
     margin-bottom: 10px;
 }
 
 .tagline {
     font-size: 1.2rem;
-    color: var(--accent);
-    font-weight: 600;
+    color: var(--text-muted);
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
@@ -67,11 +73,11 @@ body {
 .status-badge {
     display: inline-block;
     padding: 6px 18px;
-    background: rgba(16, 185, 129, 0.1);
+    background: #1f1f1f;
     color: var(--text-main);
     border-radius: 20px;
     font-size: 0.9rem;
-    border: 1px solid var(--accent);
+    border: 1px solid #333;
 }
 
 /* --- Main Container Layout --- */
@@ -91,7 +97,7 @@ body {
     font-size: 2rem;
     margin-bottom: 25px;
     color: var(--text-main);
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 2px solid #333;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -100,8 +106,13 @@ body {
     background: var(--card-bg);
     padding: 30px;
     border-radius: 12px;
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--text-muted);
     font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.content-box strong {
+    color: var(--text-main);
 }
 
 /* --- Grids for Cards --- */
@@ -116,29 +127,38 @@ body {
     padding: 30px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    border-color: var(--accent-glow);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border-color: #555;
 }
 
 .card h3 {
-    color: var(--accent);
+    color: var(--text-main);
     margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--text-muted);
 }
 
 .text-link {
     display: inline-block;
     margin-top: 15px;
-    color: var(--accent);
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
 }
 
-.text-link:hover { text-decoration: underline; }
+.text-link:hover { 
+    border-bottom: 1px solid var(--text-main); 
+}
 
 /* --- Gallery & Media (Certificates/Events) --- */
 .gallery-grid {
@@ -152,6 +172,7 @@ body {
     padding: 15px;
     border-radius: 12px;
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .gallery-item img, .gallery-item video {
@@ -160,6 +181,12 @@ body {
     height: 200px;
     object-fit: cover;
     margin-bottom: 10px;
+    filter: grayscale(30%); /* لمسة احترافية للصور */
+    transition: filter 0.3s ease;
+}
+
+.gallery-item:hover img, .gallery-item:hover video {
+    filter: grayscale(0%);
 }
 
 .caption {
@@ -170,7 +197,7 @@ body {
 /* --- Footer --- */
 footer {
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #333;
     padding-top: 40px;
     margin-top: 40px;
 }
@@ -179,7 +206,7 @@ footer {
     display: inline-block;
     text-decoration: none;
     color: var(--bg-color);
-    background: var(--accent);
+    background: var(--text-main);
     padding: 10px 30px;
     margin: 5px;
     border-radius: 8px;
@@ -188,13 +215,14 @@ footer {
 }
 
 .btn:hover {
-    background: var(--text-main);
+    background: var(--text-muted);
+    color: #000;
 }
 
 .copyright {
     margin-top: 30px;
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: #555;
 }
 
 @keyframes fadeIn {
