@@ -14,67 +14,106 @@
 </head>
 <body>
 
+    <header class="hero">
+        <img src="profile.jpg" alt="Taha Walid" class="profile-img">
+        <h1 class="name">Taha Walid</h1>
+        <p class="tagline">Computer Science Student & Backend Developer</p>
+        
+        <div class="contact-bar">
+            <span>📍 Amman, Jordan</span>
+            <span>📞 +962-XXX-XXXXXXX</span>
+            <span>📧 your-email@example.com</span>
+        </div>
+        
+        <div class="status-badge">🚀 Building Logic & Solving Problems</div>
+    </header>
+
     <div class="container">
         
-        <header class="hero">
-            <img src="Profile.jpg" alt="Taha Walid" class="profile-img">
-            <h1 class="name">Taha Walid</h1>
-            <p class="tagline">Computer Science Student & Backend Developer</p>
-            <div class="status-badge">🚀 Building Logic & Solving Problems</div>
-        </header>
+        <section class="section-block">
+            <h2 class="section-title">About Me & Academics 🎓</h2>
+            <div class="content-box">
+                <p>
+                    I am a highly motivated Computer Science student at <strong>Al-Zaytoonah University of Jordan</strong>, currently holding a GPA of <strong>[اكتب معدلك هون]</strong>. 
+                    I specialize in Java and have a strong passion for building robust backend architectures. I believe in writing clean, scalable code and continuously optimizing my algorithms.
+                </p>
+            </div>
+        </section>
 
-        <main class="grid">
+        <section class="section-block">
+            <h2 class="section-title">My Projects 💻</h2>
+            <div class="grid">
+                <div class="card project-card">
+                    <h3>Local Delivery App Backend</h3>
+                    <p>A conceptual backend architecture for a delivery application serving non-food retail stores. Focused on database efficiency and logistics logic.</p>
+                    <a href="رابط_المشروع_على_جتهاب" class="text-link" target="_blank">View on GitHub &rarr;</a>
+                </div>
+                <div class="card project-card">
+                    <h3>[اسم مشروع ثاني]</h3>
+                    <p>[وصف قصير للمشروع وشو التقنيات اللي استخدمتها فيه زي Java و HTML].</p>
+                    <a href="#" class="text-link" target="_blank">View on GitHub &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title">Certifications 📜</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="cert1-placeholder.jpg" alt="Certificate 1">
+                    <p class="caption">[اسم الشهادة الأولى]</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="cert2-placeholder.jpg" alt="Certificate 2">
+                    <p class="caption">[اسم الشهادة الثانية]</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title">Events & Activities 🎤</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Active participant in tech communities, workshops, and extracurricular activities.</p>
             
-            <section class="card">
-                <h2>About Me</h2>
-                <p>
-                    I am a Computer Science student at <strong>Al-Zaytoonah University of Jordan</strong>. 
-                    I specialize in Java and have a strong passion for building robust backend systems and structuring efficient databases.
-                </p>
-            </section>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="event1-placeholder.jpg" alt="Event photo">
+                    <p class="caption">[اسم الفعالية ومكانها]</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <video controls>
+                        <source src="event-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="caption">[وصف قصير للفيديو]</p>
+                </div>
+            </div>
+        </section>
 
-            <section class="card">
-                <h2>Projects Lab 🧪</h2>
-                <p>
-                    Currently conceptualizing a <strong>local delivery application</strong> designed specifically for non-food retail stores in the area, focusing on building a solid backend architecture to handle logistics.
-                </p>
-            </section>
-
-            <section class="card">
-                <h2>The Grind 💻</h2>
-                <p>
-                    Consistency is key. After finishing a 9-hour shift at a call center, I dedicate my time to mastering algorithms. I am currently working through a strict list of <strong>10 targeted LeetCode problems</strong> to sharpen my Java problem-solving skills.
-                </p>
-            </section>
-
-            <section class="card">
-                <h2>Mindset & Psychology 🧠</h2>
-                <p>
-                    Writing clean code requires a clear mind. I actively apply principles from neuroscience and psychology to optimize my learning. Books like <em>Atomic Habits</em>, <em>Dopamine Nation</em>, and <em>The Power of Habit</em> shape my approach to discipline and continuous improvement.
-                </p>
-            </section>
-
-            <section class="card">
-                <h2>Tech Stack</h2>
-                <ul class="tech-list">
-                    <li>Java & Object-Oriented Programming</li>
-                    <li>HTML5, CSS & Web Fundamentals</li>
-                    <li>Data Structures & Algorithms</li>
-                    <li>Git & GitHub</li>
-                </ul>
-            </section>
-
-        </main>
+        <section class="section-block">
+            <h2 class="section-title">Mindset & The Grind 🧠</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>The Consistency</h3>
+                    <p>After a 9-hour shift at a call center, my real work begins. I am dedicated to a strict problem-solving routine, currently grinding through a targeted list of 10 complex LeetCode challenges to master Java.</p>
+                </div>
+                <div class="card">
+                    <h3>My Library</h3>
+                    <p>I heavily invest in understanding human behavior to optimize my workflow. Books like <em>Atomic Habits</em>, <em>Dopamine Nation</em>, and <em>The Power of Habit</em> are foundational to my discipline.</p>
+                </div>
+            </div>
+        </section>
 
         <footer>
-            <a href="#" class="btn" target="_blank">GitHub</a>
-            <a href="#" class="btn" target="_blank">LeetCode</a>
-            <a href="mailto:your-email@example.com" class="btn">Email Me</a>
-            <p class="copyright">&copy; 2026 Taha Walid. Amman, Jordan.</p>
+            <div class="footer-links">
+                <a href="رابط_اللينكد_ان" class="btn" target="_blank">LinkedIn</a>
+                <a href="رابط_الجتهاب" class="btn" target="_blank">GitHub</a>
+                <a href="رابط_اللتكود" class="btn" target="_blank">LeetCode</a>
+            </div>
+            <p class="copyright">&copy; 2026 Taha Walid. Built from scratch with HTML & CSS.</p>
         </footer>
 
     </div>
 
 </body>
 </html>
-
