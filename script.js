@@ -39,3 +39,32 @@ hiddenElements.forEach((el) => {
     el.classList.add('hidden'); // إخفاء مبدئي
     observer.observe(el);
 });
+// 3. Auto-playing Image Slider Logic
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlides() {
+    if (slides.length === 0) return;
+
+    // اخفي كل الصور
+    slides.forEach(slide => {
+        slide.classList.remove('active-slide');
+    });
+    
+    // زيد العداد
+    slideIndex++;
+    
+    // إذا وصلنا لآخر صورة، ارجع للأولى (Circular Array Logic)
+    if (slideIndex > slides.length) { 
+        slideIndex = 1; 
+    }
+    
+    // اظهر الصورة الحالية
+    slides[slideIndex - 1].classList.add('active-slide');
+    
+    // استدعي الدالة كمان مرة بعد 4000 مللي ثانية (4 ثواني)
+    setTimeout(showSlides, 4000); 
+}
+
+// تشغيل الـ Slider
+showSlides();
