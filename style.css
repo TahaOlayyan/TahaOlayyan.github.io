@@ -216,4 +216,45 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+/* --- Auto-Slider CSS --- */
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    min-height: 350px; /* عشان يحجز مساحة ثابتة وما تنط الصفحة */
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+.active-slide {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #22d3ee; /* لون سماوي نيون ليلبق مع الثيم */
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+/* حركة التلاشي الناعمة */
+@keyframes fadeEffect {
+    from { opacity: 0.2; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
 
